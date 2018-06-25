@@ -23,6 +23,7 @@ module.exports = {
                 children: [
                     ['/ssr/createSsr', '搭建ssr'],
                     ['/ssr/ssrClient', 'ssr客户端配置'],
+                    ['/ssr/serverSpeeder', '更换内核并安装锐速'],
                 ]
             }
         ]
