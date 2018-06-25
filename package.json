@@ -4,6 +4,6 @@
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "deploy":"git push -f git@github.com:mgsod/vuepress.git master:gh-pages"
+    "deploy":"deploy.sh"
   }
 }
