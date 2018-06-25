@@ -5,8 +5,8 @@
 
 ### **1 vps选择**
 国外的服务器较多，常见的有搬瓦工，vultr，linode。但看了测评，貌似都不怎么样，价格也一般。
-所以，这里我推荐  [cloudcone](https://app.cloudcone.com/?ref=1080)，最低1.99$，基本配置也就2.67$![1](./public/img/1.png)1核0.5g内存,10g磁盘还是足够了.
-`*cloudcone支持支付宝付款,每次最低充值5$,充值入口如下:`![2](./public/img/3.png)![3](./public/img/2.png)
+所以，这里我推荐  [cloudcone](https://app.cloudcone.com/?ref=1080)，最低1.99$，基本配置也就2.67$![1](../public/img/1.png)1核0.5g内存,10g磁盘还是足够了.
+`*cloudcone支持支付宝付款,每次最低充值5$,充值入口如下:`![2](../public/img/3.png)![3](../public/img/2.png)
 ### **2 搭建ss**
 ### **2.1 安装python-pip**
 ````
