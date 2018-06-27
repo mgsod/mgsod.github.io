@@ -26,6 +26,7 @@ module.exports = {
                     ['/ssr/serverSpeeder', '更换内核并安装锐速'],
                 ]
             }
-        ]
-    }
+        ],
+        lastUpdated:'最后更新时间'
+    },
 };

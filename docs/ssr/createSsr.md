@@ -1,3 +1,11 @@
+---
+title: 搭建ssr
+meta:
+  - name: description
+    content: 如何用国外vps搭建ssr工具
+  - name: keywords
+    content: vps vpn ssr ss 翻墙 
+---
 现目前网上有很多vpn，但是基本上都是收费的软件，即使有免费的网速也不怎么好，而且不稳定。
 再者收费软件价格也不低，对于个人使用来说成本还是比较高的。
 作为开发人员呢，基本上都会有自己的一个vps，那么就可以利用这vps（国外且未被墙）来搭建属于自己的vpn.
@@ -47,7 +55,7 @@ vim /etc/shadowsocks.json
 编辑好后`esc`退出输入`:wq`保存
 ### **3.2 启动/停止ss服务**前台运行:
 ````
-    ssserver -c /etc/shadowsocks.json        
+ssserver -c /etc/shadowsocks.json        
 ````
 关闭窗口后即退出ss服务`后台运行:
 ````
