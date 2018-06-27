@@ -1,3 +1,12 @@
+---
+title: ssr客户端配置
+meta:
+  - name: description
+    content: ssr客户端配置
+  - name: keywords
+    content: vps vpn ssr ss 翻墙 ssrIos版 ssr安卓版 shadowsocksrr shdowsocks
+---
+
 接上一篇文章,配置完服务端shdowsocks后要怎么在客户端使用呢.下面就是客户端(Windows,Ios,android)下的不同配置及软件下载
  **Windows端**
  首先下载ssr客户端,github下载地址:[shadowsocksr](https://github.com/shadowsocksrr/shadowsocksr-csharp/releases)[shdowsocks](https://github.com/shadowsocks/shadowsocks-windows/releases)

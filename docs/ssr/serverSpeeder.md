@@ -1,3 +1,11 @@
+---
+title: 安装锐速
+meta:
+  - name: description
+    content: centos更换内核并安装锐速
+  - name: keywords
+    content: vps vpn ssr ss 翻墙 锐速 centos centos更换内核 shdowsocks
+---
 搭建好ssr后,基本的日常fq需求还是能满足了,但是要上油管什么的看高清视频还是有点压力的.
 这篇文章将为之前搭好的ssr安装`锐速`
 
@@ -19,7 +27,7 @@
  ::: tip
  注意 绝大多数情况下是无法直接下载更换的.这里需要将centos更新
  ````shell
-    yum update -y
+ yum update -y
  ````
  这个过程有点漫长.根据自身网络环境和vps.一般在15分钟左右.快点的话10来分钟
  ::: 
@@ -27,7 +35,7 @@
 **2 查看内核是否安装成功** 
 
  ````shell
-  rpm -qa | grep kernel
+ rpm -qa | grep kernel
  ````
  ![ssrSpeeder1](../public/img/ssrSpeeder1.png)
  

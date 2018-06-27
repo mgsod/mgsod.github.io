@@ -4,7 +4,7 @@ meta:
   - name: description
     content: 如何用国外vps搭建ssr工具
   - name: keywords
-    content: vps vpn ssr ss 翻墙 
+    content: vps vpn ssr ss 翻墙 shdowsocks
 ---
 现目前网上有很多vpn，但是基本上都是收费的软件，即使有免费的网速也不怎么好，而且不稳定。
 再者收费软件价格也不低，对于个人使用来说成本还是比较高的。
