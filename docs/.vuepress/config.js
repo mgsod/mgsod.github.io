@@ -23,10 +23,17 @@ module.exports = {
                 children: [
                     ['/ssr/createSsr', '搭建ssr'],
                     ['/ssr/ssrClient', 'ssr客户端配置'],
-                    ['/ssr/serverSpeeder', '更换内核并安装锐速'],
+                    ['/ssr/serverSpeeder', '更换内核并安装锐速']
+                ]
+            },
+            {
+                title: '前端',
+                collapsable: false,
+                children: [
+                    ['/front-end/zipImg', 'js压缩图片(上传)']
                 ]
             }
         ],
-        lastUpdated:'最后更新时间'
-    },
+        lastUpdated: '最后更新时间'
+    }
 };
