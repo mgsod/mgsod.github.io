@@ -19,7 +19,7 @@ module.exports = {
         sidebar: [
             {
                 title: 'ssr相关',
-                collapsable: false,
+                collapsable: true,
                 children: [
                     ['/ssr/createSsr', '搭建ssr'],
                     ['/ssr/ssrClient', 'ssr客户端配置'],
@@ -28,7 +28,7 @@ module.exports = {
             },
             {
                 title: '前端',
-                collapsable: false,
+                collapsable: true,
                 children: [
                     ['/front-end/zipImg', 'js压缩图片(上传)']
                 ]
