@@ -30,10 +30,14 @@ module.exports = {
                 title: '前端',
                 collapsable: true,
                 children: [
-                    ['/front-end/zipImg', 'js压缩图片(上传)']
+                    ['/front-end/zipImg', 'js压缩图片(上传)'],
+                    ['/front-end/reg', '正则分组(),不捕获(?:)以及断言'],
                 ]
             }
         ],
         lastUpdated: '最后更新时间'
+    },
+    markdown: {
+        lineNumbers: true
     }
 };
