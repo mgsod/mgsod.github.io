@@ -50,7 +50,7 @@ meta:
 
 
 
- [Android-7.0-SSR.apk](https://blog.moog.site/soft/Android-7.0-SSR.apk)
+ [Android-7.0-SSR.apk](https://moog.site/soft/Android-7.0-SSR.apk)
  
  [Android-shadowsocksr下载地址1(zip)](https://www.i5seo.com/1/SSR_3.4_for_android.zip)
 
