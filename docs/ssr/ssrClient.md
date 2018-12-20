@@ -50,10 +50,11 @@ meta:
 
 
 
+ [Android-7.0-SSR.apk](https://blog.moog.site/soft/Android-7.0-SSR.apk)
+ 
+ [Android-shadowsocksr下载地址1(zip)](https://www.i5seo.com/1/SSR_3.4_for_android.zip)
 
- [Android-shadowsocksr下载地址1](https://www.i5seo.com/1/SSR_3.4_for_android.zip)
-
- [Android-shadowsocksr下载地址2(安卓7.0版)](http://www.i5seo.com/1/Android-7.0-SSR.zip)
+ [Android-shadowsocksr下载地址2(安卓7.0版)(zip)](http://www.i5seo.com/1/Android-7.0-SSR.zip)
 
  下载安装后依旧可以选择手动添加和扫码添加.
  推荐扫码添加OK,到此pc和移动端就可以开开心心的使用自己的vpn了.
