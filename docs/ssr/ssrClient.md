@@ -35,6 +35,10 @@ meta:
 
 
  安装完成后点击`+`添加配置.配置与pc端无异或通过扫描pc端生成的二维码自动添加配置
+ 
+ `现在貌似三方工具都无法下载了.下面提供ios的ipa包,同样使用pp助手或者爱思助手,然后选择本地安装.然后选择下载好的ipa即可安装到手机`
+  
+ [ssrForIos(ios ipa)](https://moog.site/soft/ssrforios.ipa)
 
 ## Android
 
@@ -55,6 +59,8 @@ meta:
  [Android-shadowsocksr下载地址1(zip)](https://www.i5seo.com/1/SSR_3.4_for_android.zip)
 
  [Android-shadowsocksr下载地址2(安卓7.0版)(zip)](http://www.i5seo.com/1/Android-7.0-SSR.zip)
+ 
+
 
  下载安装后依旧可以选择手动添加和扫码添加.
  推荐扫码添加OK,到此pc和移动端就可以开开心心的使用自己的vpn了.
