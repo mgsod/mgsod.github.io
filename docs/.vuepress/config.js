@@ -24,6 +24,7 @@ module.exports = {
                     ['/front-end/zipImg', 'js压缩图片(上传)'],
                     ['/front-end/reg', '正则分组(),不捕获(?:)以及断言'],
                     ['/front-end/for', 'for in 和 for of'],
+                    ['/front-end/pxtorem', '移动端自适应,px转rem'],
                 ]
             },
             {

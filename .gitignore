@@ -1,6 +1,7 @@
 .DS_Store
 node_modules/
 /docs/.vuepress/dist
+/docs/.vuepress/blog/
 /dist/
 cms*
 *.zip
@@ -15,3 +16,4 @@ yarn-error.log*
 *.njsproj
 *.sln
 package-lock.json
+
