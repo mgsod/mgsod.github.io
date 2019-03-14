@@ -17,3 +17,7 @@ footer: MIT Licensed | Copyright © 2019-present mgso
 [github](https://github.com/mgsod "github/mgsod") 
 
 
+#### 友情链接
+[biabia](http://blog.mrabit.com "友情链接-biabia") 
+[王帅比](http://blog.wwolf.wang "友情链接-王帅比") 
+
