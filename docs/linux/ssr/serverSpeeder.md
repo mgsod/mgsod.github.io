@@ -37,7 +37,7 @@ meta:
  ````shell
  rpm -qa | grep kernel
  ````
- ![ssrSpeeder1](../public/img/ssrSpeeder/ssrSpeeder1.png)
+ ![ssrSpeeder1](../../public/img/ssrSpeeder/ssrSpeeder1.png)
  
  若看到`kernel-2.6.32-504.3.3.el6.x86_64`则说明安装成功
  

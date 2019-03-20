@@ -7,14 +7,14 @@ module.exports = {
     configureWebpack: {
         resolve: {
             alias: {
-                '@public': '/docs/public'
+                '@public': '../public'
             }
         }
     },
     themeConfig: {
         nav: [
             {text: 'Home', link: '/'},
-            {text: 'ssr', link: '/ssr/createSsr'},
+            {text: 'Linux', link: '/linux/ssr/createSsr'},
             {text: '前端', link: '/front-end/zipImg'},
             {text: 'github', link: 'https://github.com/mgsod'},
         ],
@@ -42,10 +42,17 @@ module.exports = {
         ],*/
         sidebar: {
             // 侧边栏在 /foo/ 上
-            '/ssr/': [
-                ['/ssr/createSsr', '搭建ssr'],
-                ['/ssr/ssrClient', 'ssr客户端配置'],
-                ['/ssr/serverSpeeder', '更换内核并安装锐速']
+            '/linux/': [
+                {
+                    title:'ssr',
+                    collapsable: false,
+                    children: [
+                        ['/linux/ssr/createSsr', '搭建ssr'],
+                        ['/linux/ssr/ssrClient', 'ssr客户端配置'],
+                        ['/linux/ssr/serverSpeeder', '更换内核并安装锐速']
+                    ]
+                }
+
             ],
             // 侧边栏在 /bar/ 上
             '/front-end/': [
@@ -53,6 +60,13 @@ module.exports = {
                 ['/front-end/reg', '正则分组(),不捕获(?:)以及断言'],
                 ['/front-end/for', 'for in 和 for of'],
                 ['/front-end/pxtorem', '移动端自适应,px转rem'],
+                {
+                    title: 'D3',
+                    collapsable: false,
+                    children: [
+                        ['/front-end/d3-bundle', 'd3.js(v4)捆图'],
+                    ]
+                }
             ]
         },
         lastUpdated: 'lastUpdated'

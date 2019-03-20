@@ -14,13 +14,13 @@ meta:
 
 ### shadowsocksr
 
- 配置如下:![ssr1](../public/img/ssrClient/ssrClient1.png)输入之前在服务器配置的ip地址端口号,密码及加密方式`*shadowsocksr 协议默认选择origin,混淆选择plain
+ 配置如下:![ssr1](../../public/img/ssrClient/ssrClient1.png)输入之前在服务器配置的ip地址端口号,密码及加密方式`*shadowsocksr 协议默认选择origin,混淆选择plain
  `点击确定后即可`
  *鼠标点击SSR链接可生成二维码,二维码可以在pc端手机端通过扫码自动添加配置
 
 ### shdowsocks 配置:
 
- ![ss2](../public/img/ssrClient/ssrClient2.png)
+ ![ss2](../../public/img/ssrClient/ssrClient2.png)
 
  shdowsocks配置比较简单,只需要输入ip,端口,密码,加密方式即可.最后别忘了点击启动系统配置
 
@@ -29,8 +29,8 @@ meta:
  由于国内App Store里shdowsocks相关软件被禁,所以需要借助三方工具`pp助手`手机连接电脑,安装`pp助手`后搜索`Shadowrocket`
  `*注:是Shadowrocket 不是shdowsocks shadowsocksr`
   <p>
-  <img src="../public/img/ssrClient/ssrClient3.png" height="450" />
-  <img src="../public/img/ssrClient/ssrClient4.png"  style="margin-left:10px" height="450" />
+  <img src="../../public/img/ssrClient/ssrClient3.png" height="450" />
+  <img src="../../public/img/ssrClient/ssrClient4.png"  style="margin-left:10px" height="450" />
   </p>
 
 
@@ -42,13 +42,13 @@ meta:
 
 ## Android
 
-  ![ss2](../public/img/ssrClient/ssrClient5.png)
+  ![ss2](../../public/img/ssrClient/ssrClient5.png)
 
   点击`shadowsocks R`
 
   <p>
-  <img src="../public/img/ssrClient/ssrClient6.png" height="450" />
-  <img src="../public/img/ssrClient/ssrClient7.png" style="margin-left:10px" height="450" />
+  <img src="../../public/img/ssrClient/ssrClient6.png" height="450" />
+  <img src="../../public/img/ssrClient/ssrClient7.png" style="margin-left:10px" height="450" />
   </p>
 
 
