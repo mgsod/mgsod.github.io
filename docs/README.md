@@ -8,7 +8,6 @@
 <msProgress name="Jquery" value="75"/>  
 <msProgress name="Vue.js" value="80"/>  
 <msProgress name="React.js" value="20"/>  
-<msProgress name="Element-ui" value="80"/>  
 <msProgress name="Nodejs" value="50"/>  
 <msProgress name="git" value="70"/>  
   

@@ -73,5 +73,8 @@ module.exports = {
     },
     markdown: {
         lineNumbers: true
-    }
+    },
+    head: [
+        ['link', { rel: 'icon', href: `./icon.png` }]
+    ]
 };
