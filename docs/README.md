@@ -23,4 +23,5 @@ github：[mgsod](https://github.com/mgsod)
 #### 友情链接
 [biabia](http://blog.mrabit.com "友情链接-biabia") 
 [王帅比](http://blog.wwolf.wang "友情链接-王帅比") 
+[YUZISHIYIGEDAHAOREN](http://47.107.247.92 "友情链接-小妹妹") 
 
