@@ -8,6 +8,11 @@
   },
   "devDependencies": {
     "less": "^3.10.3",
-    "less-loader": "^5.0.0"
+    "less-loader": "^5.0.0",
+    "vuepress": "^1.7.1",
+    "vuepress-plugin-demo-container": "^0.2.0"
+  },
+  "dependencies": {
+    "drag-cell-resize": "^1.0.2"
   }
 }

@@ -7,9 +7,9 @@ module.exports = {
     configureWebpack: {
         resolve: {
             alias: {
-                '@public': '../public'
-            }
-        }
+                '@public': '../public',
+            },
+        },
     },
     themeConfig: {
         nav: [
@@ -44,14 +44,14 @@ module.exports = {
             // 侧边栏在 /foo/ 上
             '/linux/': [
                 {
-                    title:'ssr',
+                    title: 'ssr',
                     collapsable: false,
                     children: [
                         ['/linux/ssr/createSsr', '搭建ssr'],
                         ['/linux/ssr/ssrClient', 'ssr客户端配置'],
-                        ['/linux/ssr/serverSpeeder', '更换内核并安装锐速']
-                    ]
-                }
+                        ['/linux/ssr/serverSpeeder', '更换内核并安装锐速'],
+                    ],
+                },
 
             ],
             // 侧边栏在 /bar/ 上
@@ -60,21 +60,24 @@ module.exports = {
                 ['/front-end/reg', '正则分组(),不捕获(?:)以及断言'],
                 ['/front-end/for', 'for in 和 for of'],
                 ['/front-end/pxtorem', '移动端自适应,px转rem'],
+                ['/front-end/dragCellResize', 'dragCellResize拖拽表格列宽'],
                 {
                     title: 'D3',
                     collapsable: false,
                     children: [
                         ['/front-end/d3-bundle', 'd3.js(v4)捆图'],
-                    ]
-                }
-            ]
+                    ],
+                },
+            ],
         },
-        lastUpdated: 'lastUpdated'
+        lastUpdated: 'lastUpdated',
     },
     markdown: {
-        lineNumbers: true
+        lineNumbers: true,
     },
     head: [
-        ['link', { rel: 'icon', href: `./icon.png` }]
-    ]
+        ['link', {rel: 'icon', href: `/icon.png`}],
+        ['script',{src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js','data-ad-client': 'ca-pub-5109307003615710',async: true,}]
+    ],
+    plugins: ['demo-container'],
 };
