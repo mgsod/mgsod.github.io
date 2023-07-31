@@ -10,8 +10,7 @@
 <msProgress name="Vue.js" value="80"/>  
 <msProgress name="React.js" value="20"/>  
 <msProgress name="Nodejs" value="50"/>  
-<msProgress name="git" value="70"/>  
-
+<msProgress name="git" value="70"/>
 
 现居：成都
 
@@ -27,4 +26,4 @@ github：[mgsod](https://github.com/mgsod)
 [王帅比](http://blog.wwolf.wang "友情链接-王帅比")
 [YUZISHIYIGEDAHAOREN](http://47.107.247.92 "友情链接-小妹妹")
 
-[蜀 ICP 备 16036826 号](https://beian.miit.gov.cn/)
+[蜀 ICP 备 16036826 号-3](https://beian.miit.gov.cn/)
