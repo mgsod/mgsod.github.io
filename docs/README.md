@@ -19,11 +19,3 @@ Email：<a href="mailto:mgso@foxmail.com">mgso@foxmail.com</a>
 入行时间：2016-02-19
 
 github：[mgsod](https://github.com/mgsod)
-
-#### 友情链接
-
-[biabia](http://blog.mrabit.com "友情链接-biabia")
-[王帅比](http://blog.wwolf.wang "友情链接-王帅比")
-[YUZISHIYIGEDAHAOREN](http://47.107.247.92 "友情链接-小妹妹")
-
-[蜀 ICP 备 16036826 号-3](https://beian.miit.gov.cn/)
