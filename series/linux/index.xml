@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Linux on Mgso</title>
+    <link>https://mgso.site/series/linux/</link>
+    <description>Recent content in Linux on Mgso</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 28 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mgso.site/series/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>群晖Nas搭建wireguard回家</title>
+      <link>https://mgso.site/linux/wireguard/</link>
+      <pubDate>Thu, 28 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://mgso.site/linux/wireguard/</guid>
+      <description>最近电信扫描家宽web端口、pcdn有点严格，不少网友都被下通知整改，不然关闭套餐。有了公网ip确实方便很多，虽然是动态的但依旧可以用各种ddns 服务绑定域名。但问题又来了，也有网友说电信查到未备案的域名用了ddns解析到家宽ip，也不行！也要整改！
+公网ip资源可贵啊，为了避免各种理由被关套餐或者导致公网ip业务没了就可惜了。毕竟现在可不是说工信部投诉就能给你ip的。得100块钱一个月 最近查的严，那就关掉ddns服务，和一切web端口了。但出门在外总有需求会用到家里的各种服务，所以这里选择搭建wireguard回家，下面介绍整个流程
+1、关于wireguard WireGuard 是一个易于配置、快速且安全的开源 VPN，它利用了最新的加密技术。目的是提供一种更快、更简单、更精简的通用 VPN，它可以轻松地在树莓派这类低端设备到高端服务器上部署。</description>
+    </item>
+  </channel>
+</rss>

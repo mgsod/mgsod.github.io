@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>图片压缩 on Mgso</title>
+    <link>https://mgso.site/tags/%E5%9B%BE%E7%89%87%E5%8E%8B%E7%BC%A9/</link>
+    <description>Recent content in 图片压缩 on Mgso</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 11 Jul 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mgso.site/tags/%E5%9B%BE%E7%89%87%E5%8E%8B%E7%BC%A9/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>js压缩图片</title>
+      <link>https://mgso.site/front-end/zipimg/</link>
+      <pubDate>Wed, 11 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>https://mgso.site/front-end/zipimg/</guid>
+      <description>最近做私单遇到一个问题.客户觉得上传一张手机上的图片速度很慢.有时候甚至慢到timeout.于是要求前端做压缩 寻找了很多解决方案,大多数都是以舍弃高宽为基础从而实现压缩.但是这种做法无疑让图片受损.且若是身份证之类的证件 图片用这种压缩方式更不可取.于是乎找到一个近乎完美的解决方案.压缩图片质量而不是高宽
+1 图片压缩
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 /** * @param path 文件路径 * @param options 包含宽,高,质量 * @param callback 图片压缩后执行的回调函数 */ function canvasDataURL(path, options, callback) { var img = new Image(); img.src = path; img.</description>
+    </item>
+  </channel>
+</rss>

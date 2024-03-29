@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Rem on Mgso</title>
+    <link>https://mgso.site/tags/rem/</link>
+    <description>Recent content in Rem on Mgso</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <atom:link href="https://mgso.site/tags/rem/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>移动端自适应.px转rem</title>
+      <link>https://mgso.site/front-end/pxtorem/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mgso.site/front-end/pxtorem/</guid>
+      <description>在移动端开发中,不同分辨率的设备所展示的样式也会不同.为了解决这一问题,我们用rem单位替换掉原来的px单位. 已达到移动端自适应的效果
+rem 先来简单了解一下rem.
+rem（font size of the root element）是指相对于根元素的字体大小的单位。简单的说它就是一个相对单位。看到rem大家一定会想起em单位，em（font size of the element）是指相对于父元素的字体大小的单位。它们之间其实很相似，只不过一个计算的规则是依赖根元素一个是依赖父元素计算。
+1 2 3 4 5 6 7 8 9 html{ font-size:20px; } .btn { width: 6rem; height: 3rem; line-height: 3rem; font-size: 1.2rem; } 如上述代码, html中设置了font-size为20px. 那么根据rem计算规则, .btn中的width:6rem 其实等价于width:120px; 也就是说现在的1rem = 20px. 那么之后我们在开发过程中只需使用rem作为基本单位即可.
+这里就会有个问题.我要如何知道根节点中font-size应该设置多少呢?
+设置根节点font-size 1 2 3 4 5 6 7 8 9 10 11 12 13 14 //设置根节点font-size (function (doc, win) { var docEl = doc.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+
+<link rel="stylesheet" href="https://mgso.site/css/custom.css">
+<title>移动端自适应.px转rem | Mgso</title>
+<meta name="keywords" content="移动端适配, rem">
+<meta name="description" content="在移动端开发中,不同分辨率的设备所展示的样式也会不同.为了解决这一问题,我们用rem单位替换掉原来的px单位. 已达到移动端自适应的效果
+rem 先来简单了解一下rem.
+rem（font size of the root element）是指相对于根元素的字体大小的单位。简单的说它就是一个相对单位。看到rem大家一定会想起em单位，em（font size of the element）是指相对于父元素的字体大小的单位。它们之间其实很相似，只不过一个计算的规则是依赖根元素一个是依赖父元素计算。
+1 2 3 4 5 6 7 8 9 html{ font-size:20px; } .btn { width: 6rem; height: 3rem; line-height: 3rem; font-size: 1.2rem; } 如上述代码, html中设置了font-size为20px. 那么根据rem计算规则, .btn中的width:6rem 其实等价于width:120px; 也就是说现在的1rem = 20px. 那么之后我们在开发过程中只需使用rem作为基本单位即可.
+这里就会有个问题.我要如何知道根节点中font-size应该设置多少呢?
+设置根节点font-size 1 2 3 4 5 6 7 8 9 10 11 12 13 14 //设置根节点font-size (function (doc, win) { var docEl = doc.">
+<meta name="author" content="">
+<link rel="canonical" href="https://mgso.site/front-end/pxtorem/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css" integrity="sha256-tgnFjVwRu5CxpU4EAF10rR3fIhZet59VM5Z&#43;V9&#43;cO1A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://mgso.site/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://mgso.site/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://mgso.site/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://mgso.site/apple-touch-icon.png">
+<link rel="mask-icon" href="https://mgso.site/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="zh-cn" href="https://mgso.site/front-end/pxtorem/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="移动端自适应.px转rem" />
+<meta property="og:description" content="在移动端开发中,不同分辨率的设备所展示的样式也会不同.为了解决这一问题,我们用rem单位替换掉原来的px单位. 已达到移动端自适应的效果
+rem 先来简单了解一下rem.
+rem（font size of the root element）是指相对于根元素的字体大小的单位。简单的说它就是一个相对单位。看到rem大家一定会想起em单位，em（font size of the element）是指相对于父元素的字体大小的单位。它们之间其实很相似，只不过一个计算的规则是依赖根元素一个是依赖父元素计算。
+1 2 3 4 5 6 7 8 9 html{ font-size:20px; } .btn { width: 6rem; height: 3rem; line-height: 3rem; font-size: 1.2rem; } 如上述代码, html中设置了font-size为20px. 那么根据rem计算规则, .btn中的width:6rem 其实等价于width:120px; 也就是说现在的1rem = 20px. 那么之后我们在开发过程中只需使用rem作为基本单位即可.
+这里就会有个问题.我要如何知道根节点中font-size应该设置多少呢?
+设置根节点font-size 1 2 3 4 5 6 7 8 9 10 11 12 13 14 //设置根节点font-size (function (doc, win) { var docEl = doc." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mgso.site/front-end/pxtorem/" /><meta property="article:section" content="front-end" />
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="移动端自适应.px转rem"/>
+<meta name="twitter:description" content="在移动端开发中,不同分辨率的设备所展示的样式也会不同.为了解决这一问题,我们用rem单位替换掉原来的px单位. 已达到移动端自适应的效果
+rem 先来简单了解一下rem.
+rem（font size of the root element）是指相对于根元素的字体大小的单位。简单的说它就是一个相对单位。看到rem大家一定会想起em单位，em（font size of the element）是指相对于父元素的字体大小的单位。它们之间其实很相似，只不过一个计算的规则是依赖根元素一个是依赖父元素计算。
+1 2 3 4 5 6 7 8 9 html{ font-size:20px; } .btn { width: 6rem; height: 3rem; line-height: 3rem; font-size: 1.2rem; } 如上述代码, html中设置了font-size为20px. 那么根据rem计算规则, .btn中的width:6rem 其实等价于width:120px; 也就是说现在的1rem = 20px. 那么之后我们在开发过程中只需使用rem作为基本单位即可.
+这里就会有个问题.我要如何知道根节点中font-size应该设置多少呢?
+设置根节点font-size 1 2 3 4 5 6 7 8 9 10 11 12 13 14 //设置根节点font-size (function (doc, win) { var docEl = doc."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Front-Ends",
+      "item": "https://mgso.site/front-end/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "移动端自适应.px转rem",
+      "item": "https://mgso.site/front-end/pxtorem/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "移动端自适应.px转rem",
+  "name": "移动端自适应.px转rem",
+  "description": "在移动端开发中,不同分辨率的设备所展示的样式也会不同.为了解决这一问题,我们用rem单位替换掉原来的px单位. 已达到移动端自适应的效果\nrem 先来简单了解一下rem.\nrem（font size of the root element）是指相对于根元素的字体大小的单位。简单的说它就是一个相对单位。看到rem大家一定会想起em单位，em（font size of the element）是指相对于父元素的字体大小的单位。它们之间其实很相似，只不过一个计算的规则是依赖根元素一个是依赖父元素计算。\n1 2 3 4 5 6 7 8 9 html{ font-size:20px; } .btn { width: 6rem; height: 3rem; line-height: 3rem; font-size: 1.2rem; } 如上述代码, html中设置了font-size为20px. 那么根据rem计算规则, .btn中的width:6rem 其实等价于width:120px; 也就是说现在的1rem = 20px. 那么之后我们在开发过程中只需使用rem作为基本单位即可.\n这里就会有个问题.我要如何知道根节点中font-size应该设置多少呢?\n设置根节点font-size 1 2 3 4 5 6 7 8 9 10 11 12 13 14 //设置根节点font-size (function (doc, win) { var docEl = doc.",
+  "keywords": [
+    "移动端适配", "rem"
+  ],
+  "articleBody": "在移动端开发中,不同分辨率的设备所展示的样式也会不同.为了解决这一问题,我们用rem单位替换掉原来的px单位. 已达到移动端自适应的效果\nrem 先来简单了解一下rem.\nrem（font size of the root element）是指相对于根元素的字体大小的单位。简单的说它就是一个相对单位。看到rem大家一定会想起em单位，em（font size of the element）是指相对于父元素的字体大小的单位。它们之间其实很相似，只不过一个计算的规则是依赖根元素一个是依赖父元素计算。\n1 2 3 4 5 6 7 8 9 html{ font-size:20px; } .btn { width: 6rem; height: 3rem; line-height: 3rem; font-size: 1.2rem; } 如上述代码, html中设置了font-size为20px. 那么根据rem计算规则, .btn中的width:6rem 其实等价于width:120px; 也就是说现在的1rem = 20px. 那么之后我们在开发过程中只需使用rem作为基本单位即可.\n这里就会有个问题.我要如何知道根节点中font-size应该设置多少呢?\n设置根节点font-size 1 2 3 4 5 6 7 8 9 10 11 12 13 14 //设置根节点font-size (function (doc, win) { var docEl = doc.documentElement, resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize', recalc = function () { var rem = docEl.clientWidth / 10; if (!rem) return; docEl.style.fontSize = rem + 'px'; }; recalc(); if (!doc.addEventListener) return; win.addEventListener(resizeEvt, recalc, false); //窗体大小发生改变时 doc.addEventListener('DOMContentLoaded', recalc, false);//文档重载时 })(document, window); 只需通过上面的代码.我们既可给html设置对应的font-size值.\n自动转换px为rem postcss-pxtorem 现在根节点的值设置好了,我们只需在开发过程中使用rem单位就可以实现自适应了,但是我们常用的是px单位.ui给出的设计稿也是px作为单位. 所以,我们需要一个将px转换为rem单位的东西postcss-pxtorem github地址\n这是一个css后置处理器,通过配置.可以将所有的px单位转换成rem. 以便于我们还是按照UI给的设计稿中的px单位进行开发,不用去考虑rem 的转换\nInstall 首先安装 postcss-pxtorem\n1 npm install postcss-pxtorem --save-dev vue-cli 配置 根目录下 配置.postcssrc.js文件\n1 2 3 4 5 6 7 8 9 10 11 module.exports = { \"plugins\": { \"postcss-pxtorem\": { \"rootValue\": 37.5, \"propList\": [\"*\"], // 注意：如果有使用第三方UI如VUX，则需要配置下忽略选择器不转换。 // 规则是class中包含的字符串，如vux中所有的class前缀都是weui-。也可以是正则。 \"selectorBlackList\": [\"vux-\", 'van-'] } } } 配置完成后在css编写过程中,依旧使用px作为单位.pxtorem会自动帮我们转换. 如下图\n",
+  "wordCount" : "168",
+  "inLanguage": "zh-cn",
+  "datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://mgso.site/front-end/pxtorem/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Mgso",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://mgso.site/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://mgso.site/" accesskey="h" title="Mgso (Alt + H)">Mgso</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://mgso.site/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://mgso.site/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      移动端自适应.px转rem
+    </h1>
+    <div class="post-meta">
+
+</div>
+  </header> 
+  <div class="post-content"><p>在移动端开发中,不同分辨率的设备所展示的样式也会不同.为了解决这一问题,我们用rem单位替换掉原来的px单位.
+已达到移动端自适应的效果</p>
+<h2 id="rem">rem<a hidden class="anchor" aria-hidden="true" href="#rem">#</a></h2>
+<p>先来简单了解一下rem.</p>
+<p><code>rem</code>（font size of the root element）是指相对于<code>根元素</code>的字体大小的单位。简单的说它就是一个相对单位。看到rem大家一定会想起em单位，em（font size of the element）是指相对于<code>父元素</code>的字体大小的单位。它们之间其实很相似，只不过一个计算的规则是依赖<code>根元素</code>一个是依赖<code>父元素</code>计算。</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">html</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">font-size</span>:<span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">btn</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">6</span><span style="color:#66d9ef">rem</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">3</span><span style="color:#66d9ef">rem</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">line-height</span>: <span style="color:#ae81ff">3</span><span style="color:#66d9ef">rem</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">1.2</span><span style="color:#66d9ef">rem</span>; 
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>如上述代码, <code>html</code>中设置了<code>font-size</code>为20px. 那么根据<code>rem</code>计算规则, <code>.btn</code>中的<code>width:6rem</code> 其实等价于<code>width:120px</code>;
+也就是说现在的<code>1rem = 20px</code>. 那么之后我们在开发过程中只需使用rem作为基本单位即可.</p>
+<p>这里就会有个问题.我要如何知道根节点中<code>font-size</code>应该设置多少呢?</p>
+<h2 id="设置根节点font-size">设置根节点font-size<a hidden class="anchor" aria-hidden="true" href="#设置根节点font-size">#</a></h2>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">//设置根节点font-size
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  (<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">doc</span>, <span style="color:#a6e22e">win</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">docEl</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">doc</span>.<span style="color:#a6e22e">documentElement</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">resizeEvt</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;orientationchange&#39;</span> <span style="color:#66d9ef">in</span> window <span style="color:#f92672">?</span> <span style="color:#e6db74">&#39;orientationchange&#39;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;resize&#39;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">recalc</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> () {       
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">rem</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">docEl</span>.<span style="color:#a6e22e">clientWidth</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">rem</span>) <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>              <span style="color:#a6e22e">docEl</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">fontSize</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">rem</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;px&#39;</span>;
+</span></span><span style="display:flex;"><span>      };
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">recalc</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">doc</span>.<span style="color:#a6e22e">addEventListener</span>) <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">win</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#a6e22e">resizeEvt</span>, <span style="color:#a6e22e">recalc</span>, <span style="color:#66d9ef">false</span>); <span style="color:#75715e">//窗体大小发生改变时
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">doc</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;DOMContentLoaded&#39;</span>, <span style="color:#a6e22e">recalc</span>, <span style="color:#66d9ef">false</span>);<span style="color:#75715e">//文档重载时
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  })(document, window);
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>只需通过上面的代码.我们既可给html设置对应的<code>font-size</code>值.</p>
+<h2 id="自动转换px为rem-postcss-pxtorem">自动转换px为rem postcss-pxtorem<a hidden class="anchor" aria-hidden="true" href="#自动转换px为rem-postcss-pxtorem">#</a></h2>
+<p>现在根节点的值设置好了,我们只需在开发过程中使用rem单位就可以实现自适应了,但是我们常用的是px单位.ui给出的设计稿也是px作为单位.
+所以,我们需要一个将px转换为rem单位的东西<code>postcss-pxtorem</code>  <a href="https://github.com/cuth/postcss-pxtorem">github地址</a></p>
+<p>这是一个<code>css后置处理器</code>,通过配置.可以将所有的px单位转换成rem. 以便于我们还是按照UI给的设计稿中的px单位进行开发,不用去考虑rem
+的转换</p>
+<h3 id="install">Install<a hidden class="anchor" aria-hidden="true" href="#install">#</a></h3>
+<p>首先安装 postcss-pxtorem</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npm install postcss-pxtorem --save-dev
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="vue-cli-配置">vue-cli 配置<a hidden class="anchor" aria-hidden="true" href="#vue-cli-配置">#</a></h3>
+<p>根目录下 配置<code>.postcssrc.js</code>文件</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;plugins&#34;</span><span style="color:#f92672">:</span> {   
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;postcss-pxtorem&#34;</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;rootValue&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">37.5</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;propList&#34;</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;*&#34;</span>],
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e">// 注意：如果有使用第三方UI如VUX，则需要配置下忽略选择器不转换。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#75715e">// 规则是class中包含的字符串，如vux中所有的class前缀都是weui-。也可以是正则。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#e6db74">&#34;selectorBlackList&#34;</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;vux-&#34;</span>, <span style="color:#e6db74">&#39;van-&#39;</span>]
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>配置完成后在css编写过程中,依旧使用<code>px</code>作为单位.<code>pxtorem</code>会自动帮我们转换.
+如下图</p>
+<p><img loading="lazy" src="before.png" alt="before"  />
+</p>
+<p><img loading="lazy" src="after.png" alt="after"  />
+</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://mgso.site/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D/">移动端适配</a></li>
+      <li><a href="https://mgso.site/tags/rem/">Rem</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2024 <a href="https://mgso.site/">Mgso</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
